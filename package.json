@@ -1,0 +1,27 @@
+{
+  "name": "webopers.com",
+  "version": "1.0.0",
+  "description": "Webopers",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/webopers/webopers.git"
+  },
+  "keywords": [
+    "webopers"
+  ],
+  "author": "Nguyen Khac Khanh (Encacap)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/webopers/webopers/issues"
+  },
+  "homepage": "https://github.com/webopers/webopers#readme",
+  "devDependencies": {
+    "eslint": "^7.6.0",
+    "eslint-config-airbnb-base": "^14.2.0",
+    "eslint-plugin-import": "^2.22.0"
+  }
+}
