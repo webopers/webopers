@@ -1,10 +1,53 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="shortcut icon" href="/public/img/favicon.png" type="image/x-icon" />
+    <link rel="stylesheet" href="/public/css/base.min.css" />
+    <link rel="stylesheet" href="/public/css/account.min.css" />
     <title>Login - Webopers</title>
   </head>
-  <body></body>
+  <body>
+    <form action="" method="POST" class="container form">
+      <div class="form-header">
+        <div class="form-title text-supper-large">
+          Welcome to <a href="/" class="text-primary text-bold">Webopers</a>
+        </div>
+        <div class="form-sub-title text-small">
+          Đăng nhập bằng tài khoản Webopers của bạn
+        </div>
+        <div class="form-step">
+          <div class="form-step-block active"></div>
+        </div>
+      </div>
+      <div class="form-body">
+        <div class="form-group">
+          <div class="form-icon form-icon-mail"></div>
+          <input type="text" name="email" id="email" class="form-input" placeholder="Email" />
+          <div class="form-message text-small">Email không được phép để trống</div>
+        </div>
+        <div class="form-group">
+          <div class="form-icon form-icon-key"></div>
+          <input type="password" name="password" id="password" class="form-input" placeholder="Mật khẩu" />
+          <div class="form-message text-small">Mật khẩu không được phép để trống</div>
+        </div>
+      </div>
+      <span class="form-forgot text-small">Quên mật khẩu?</span>
+      <div class="form-button-group">
+        <button type="submit" class="btn btn-primary">Đăng nhập</button>
+        <button class="btn btn-secondary">Đăng ký</button>
+      </div>
+      <div class="form-social">
+        <div class="form-social-block form-google">
+          <div class="form-social-icon form-icon-google"></div>
+          <div class="form-social-text">Đăng nhập với Google</div>
+        </div>
+        <div class="form-social-block form-facebook">
+          <div class="form-social-icon form-icon-facebook"></div>
+          <div class="form-social-text">Đăng nhập với Facebook</div>
+        </div>
+      </div>
+    </form>
+  </body>
 </html>

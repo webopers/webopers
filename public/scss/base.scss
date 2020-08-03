@@ -1,0 +1,102 @@
+@import "font-face";
+@import "variables";
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: "Quicksand", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+a {
+  text-decoration: none;
+}
+
+input {
+  background: none;
+  font-family: inherit;
+  font-size: 15px;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  box-shadow: 0 0 0 30px #fff inset;
+}
+
+input::-webkit-input-placeholder {
+  color: $textLightColor;
+}
+
+svg path {
+  fill: currentcolor;
+}
+
+.text-supper-large {
+  font-size: 24px;
+}
+
+.text-small {
+  font-size: 15px;
+}
+
+.text-primary {
+  color: $primaryColor;
+}
+
+.text-bold {
+  font-weight: 500;
+}
+
+.btn {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 600;
+  transition: 0.2s background-color, 0.2s box-shadow;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background-color: $primaryColor;
+  box-shadow: 0px 0px 4px #3da9fc;
+  color: #fff;
+}
+
+.btn-primary:focus {
+  background-color: $primaryBoldColor;
+}
+
+.btn-primary:hover {
+  box-shadow: 0 0 8px #3da9fc;
+}
+
+.btn-secondary {
+  background-color: #fff;
+  box-shadow: 0px 0px 12px #f0f0f0;
+  color: $primaryColor;
+}
+
+.btn-secondary:focus {
+  background-color: #fcfcfc;
+}
+
+.btn-secondary:hover {
+  box-shadow: 0px 0px 16px #e6e6e6;
+}

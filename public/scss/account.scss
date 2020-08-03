@@ -1,0 +1,165 @@
+@import "variables";
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+.container {
+  width: 480px;
+  min-height: 200px;
+  border-radius: 10px;
+}
+
+.form {
+  box-shadow: 0 0 24px rgba(0, 0, 0, 0.1);
+  padding: 50px 60px 40px 60px;
+  &-step {
+    display: flex;
+    margin-top: 40px;
+    &-block {
+      width: 60px;
+      height: 3px;
+      border-radius: 3px;
+      margin-right: 20px;
+      background-color: $borderColor;
+    }
+    &-block.active {
+      background-color: $primaryColor;
+    }
+  }
+  &-sub-title {
+    margin-top: 14px;
+    color: $textLightColor;
+  }
+  &-body {
+    margin-top: 65px;
+    border: 1px solid $borderColor;
+    border-radius: 5px;
+    overflow: hidden;
+  }
+  &-group {
+    position: relative;
+  }
+  &-group.invalid &-message,
+  &-group.invalid &-input,
+  &-group.invalid &-input::-webkit-input-placeholder {
+    color: red;
+  }
+  &-group.invalid &-message {
+    display: block;
+  }
+  &-group.invalid &-icon {
+    background-color: red;
+  }
+  &-group:not(:last-child) {
+    border-bottom: 1px solid $borderColor;
+  }
+  &-input {
+    width: 100%;
+    border: none;
+    outline: none;
+    padding: 18px 20px 18px 62px;
+  }
+  &-message {
+    display: none;
+    margin-top: -4px;
+    padding: 0px 24px 20px;
+  }
+  &-icon {
+    position: absolute;
+    top: 20px;
+    left: 24px;
+    width: 16px;
+    height: 16px;
+    background: $iconColor;
+    -webkit-mask-size: cover;
+    mask-size: cover;
+  }
+  &-icon-mail {
+    -webkit-mask-image: url(/public/img/mail.svg);
+    mask-image: url(/public/img/mail.svg);
+  }
+  &-icon-key {
+    -webkit-mask-image: url(/public/img/key.svg);
+    mask-image: url(/public/img/key.svg);
+  }
+  &-icon-google {
+    background: $googleColor;
+    margin: 0 20px;
+    width: 12px;
+    height: 13px;
+    -webkit-mask-image: url(/public/img/google.svg);
+    mask-image: url(/public/img/google.svg);
+  }
+  &-icon-facebook {
+    background: $facebookColor;
+    margin: 0 22px;
+    width: 8px;
+    height: 14px;
+    -webkit-mask-image: url(/public/img/facebook.svg);
+    mask-image: url(/public/img/facebook.svg);
+  }
+  &-forgot {
+    float: right;
+    margin: 14px 0 16px;
+    color: $textLightColor;
+  }
+  &-forgot:hover {
+    color: $primaryColor;
+    cursor: pointer;
+  }
+  &-button-group {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+  &-social {
+    margin-top: 65px;
+  }
+  &-social-block {
+    display: flex;
+    align-items: center;
+    padding: 11px 0px;
+    font-weight: 500;
+    font-size: 15px;
+    transition: 0.2s border-color;
+    margin-bottom: 20px;
+    border: 1px solid $borderColor;
+    border-radius: 5px;
+  }
+  &-social-block:hover {
+    cursor: pointer;
+  }
+  &-social-icon {
+    -webkit-mask-size: cover;
+    mask-size: cover;
+  }
+  &-social-text {
+    flex: 1;
+    text-align: center;
+    border-left: 1px solid $borderColor;
+  }
+  &-google &-social-text {
+    color: $googleColor;
+  }
+  &-google:hover {
+    border-color: $googleColor;
+  }
+  &-facebook &-social-text {
+    color: $facebookColor;
+  }
+  &-facebook:hover {
+    border-color: $facebookColor;
+  }
+}
+
+.btn {
+  flex: 1;
+}
+.btn-secondary {
+  margin-left: 20px;
+}
