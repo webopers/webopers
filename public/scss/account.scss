@@ -15,7 +15,7 @@ body {
 }
 
 .form {
-  box-shadow: 0 0 24px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 24px rgba(0, 0, 0, 0.05);
   padding: 50px 60px 40px 60px;
   &-step {
     display: flex;
@@ -75,38 +75,20 @@ body {
     left: 24px;
     width: 16px;
     height: 16px;
-    background: $iconColor;
-    -webkit-mask-size: cover;
-    mask-size: cover;
   }
-  &-icon-mail {
-    -webkit-mask-image: url(/public/img/mail.svg);
-    mask-image: url(/public/img/mail.svg);
-  }
-  &-icon-key {
-    -webkit-mask-image: url(/public/img/key.svg);
-    mask-image: url(/public/img/key.svg);
-  }
-  &-icon-google {
-    background: $googleColor;
-    margin: 0 20px;
-    width: 12px;
-    height: 13px;
-    -webkit-mask-image: url(/public/img/google.svg);
-    mask-image: url(/public/img/google.svg);
-  }
-  &-icon-facebook {
-    background: $facebookColor;
-    margin: 0 22px;
-    width: 8px;
-    height: 14px;
-    -webkit-mask-image: url(/public/img/facebook.svg);
-    mask-image: url(/public/img/facebook.svg);
+  &-show-password {
+    position: absolute;
+    top: 21px;
+    right: 24px;
+    width: 20px;
+    height: 16px;
+    cursor: pointer;
   }
   &-forgot {
     float: right;
     margin: 14px 0 16px;
     color: $textLightColor;
+    transition: 0.15s color;
   }
   &-forgot:hover {
     color: $primaryColor;
@@ -126,7 +108,7 @@ body {
     padding: 11px 0px;
     font-weight: 500;
     font-size: 15px;
-    transition: 0.2s border-color;
+    transition: 0.15s border-color;
     margin-bottom: 20px;
     border: 1px solid $borderColor;
     border-radius: 5px;
@@ -162,4 +144,11 @@ body {
 }
 .btn-secondary {
   margin-left: 20px;
+}
+.spinner-border {
+  display: none;
+  margin-right: 10px;
+}
+.btn-disabled .spinner-border {
+  display: inline-block;
 }
