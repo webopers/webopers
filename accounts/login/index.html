@@ -3,13 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="shortcut icon" href="/public/img/favicon.png" type="image/x-icon" />
+    <link rel="shortcut icon" href="/public/img/favicon.svg" type="image/x-icon" />
     <link rel="stylesheet" href="/public/css/base.min.css" />
     <link rel="stylesheet" href="/public/css/account.min.css" />
     <title>Login - Webopers</title>
   </head>
   <body>
-    <form action="" method="POST" class="container form">
+    <form action="" method="POST" class="container form" id="login-form">
       <div class="form-header">
         <div class="form-title text-supper-large">
           Welcome to <a href="/" class="text-primary text-bold">Webopers</a>
@@ -24,12 +24,28 @@
       <div class="form-body">
         <div class="form-group">
           <div class="form-icon icon icon-mail"></div>
-          <input type="text" name="email" id="email" class="form-input" placeholder="Địa chỉ Email" />
+          <input
+            type="text"
+            name="email"
+            id="email"
+            autocomplete="email"
+            class="form-input"
+            data-rules="required|email"
+            placeholder="Địa chỉ Email"
+          />
           <div class="form-message text-small">Email không được phép để trống</div>
         </div>
         <div class="form-group">
           <div class="form-icon icon icon-key"></div>
-          <input type="password" name="password" id="password" class="form-input" placeholder="Mật khẩu" />
+          <input
+            type="password"
+            name="password"
+            id="password"
+            autocomplete="current-password"
+            data-rules="required|min:6"
+            class="form-input"
+            placeholder="Mật khẩu"
+          />
           <div class="form-message text-small">Mật khẩu không được phép để trống</div>
           <div class="form-show-password icon icon-eye-slash"></div>
         </div>
@@ -40,7 +56,7 @@
           <div class="spinner-border"></div>
           Đăng nhập
         </button>
-        <button class="btn btn-secondary btn-center">
+        <button type="button" class="btn btn-secondary btn-center">
           <div class="spinner-border"></div>
           Đăng ký
         </button>
@@ -56,5 +72,6 @@
         </div>
       </div>
     </form>
+    <script src="/public/js/account/login.js" type="module"></script>
   </body>
 </html>

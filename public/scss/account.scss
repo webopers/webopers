@@ -2,15 +2,16 @@
 
 body {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100vw;
+  width: 100%;
   height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 
 .container {
   width: 480px;
-  min-height: 200px;
+  min-height: min-content;
+  margin: auto;
   border-radius: 10px;
 }
 
@@ -44,17 +45,15 @@ body {
   &-group {
     position: relative;
   }
-  &-group.invalid &-message,
-  &-group.invalid &-input,
-  &-group.invalid &-input::-webkit-input-placeholder {
+  &-group.invalid &-message {
     color: red;
   }
   &-group.invalid &-message {
     display: block;
   }
-  &-group.invalid &-icon {
-    background-color: red;
-  }
+  // &-group.invalid &-icon {
+  //   background-color: red;
+  // }
   &-group:not(:last-child) {
     border-bottom: 1px solid $borderColor;
   }
