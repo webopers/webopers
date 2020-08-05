@@ -99,7 +99,7 @@ class Validator {
 
   changeInputsVisibility = (isDisabled) => {
     const submitButton = this.formElement.querySelector("[type=submit]");
-    if (disabled) submitButton.classList.add("btn-disabled");
+    if (isDisabled) submitButton.classList.add("btn-disabled");
     else submitButton.classList.remove("btn-disabled");
     this.inputs.forEach((input) => {
       const inputElement = input;
