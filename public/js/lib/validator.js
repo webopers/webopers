@@ -69,10 +69,11 @@ class Validator {
   handleValidate = (event) => {
     const rules = this.formRules[event.target.name];
     let errorMessage;
-    rules.find((rule) => {
+    // eslint-disable-next-line no-restricted-syntax
+    for (const rule of rules) {
       errorMessage = rule(event.target.value);
-      return errorMessage;
-    });
+      if (errorMessage) break;
+    }
     if (errorMessage) {
       const formGroup = this.getParent(event.target, ".form-group");
       const formMessage = formGroup.querySelector(".form-message");
