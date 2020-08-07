@@ -23,7 +23,6 @@
       </div>
       <div class="form-body">
         <div class="form-group">
-          <div class="form-icon icon icon-mail"></div>
           <input
             type="text"
             name="email"
@@ -33,10 +32,10 @@
             data-rules="required|email"
             placeholder="Địa chỉ Email"
           />
+          <div class="form-icon icon icon-mail"></div>
           <div class="form-message text-small">Email không được phép để trống</div>
         </div>
         <div class="form-group">
-          <div class="form-icon icon icon-key"></div>
           <input
             type="password"
             name="password"
@@ -46,6 +45,7 @@
             class="form-input"
             placeholder="Mật khẩu"
           />
+          <div class="form-icon icon icon-key"></div>
           <div class="form-message text-small">Mật khẩu không được phép để trống</div>
           <div class="form-show-password icon icon-eye-slash"></div>
         </div>
@@ -72,6 +72,9 @@
         </div>
       </div>
     </form>
+    <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-firestore.js"></script>
     <script src="/public/js/account/login.js" type="module"></script>
   </body>
 </html>

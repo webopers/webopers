@@ -51,9 +51,6 @@ body {
   &-group.invalid &-message {
     display: block;
   }
-  // &-group.invalid &-icon {
-  //   background-color: red;
-  // }
   &-group:not(:last-child) {
     border-bottom: 1px solid $borderColor;
   }
@@ -62,6 +59,9 @@ body {
     border: none;
     outline: none;
     padding: 18px 20px 18px 62px;
+  }
+  &-input:focus ~ &-icon {
+    background-color: $primaryColor;
   }
   &-message {
     display: none;
