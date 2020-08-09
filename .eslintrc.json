@@ -1,0 +1,19 @@
+{
+    "env": {
+        "browser": true,
+        "es2020": true
+    },
+    "parser": "@babel/eslint-parser",
+    "extends": ["airbnb-base"],
+    "parserOptions": {
+        "ecmaVersion": 11,
+        "sourceType": "module"
+    },
+    "rules": {
+        "indent": ["error", 4],
+        "no-console": "off",
+        "linebreak-style": ["error", "windows"],
+        "no-underscore-dangle": ["error", { "allow": ["_id"] }],
+        "import/extensions": ["off", "never", { "js": "always" }]
+    }
+}
