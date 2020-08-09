@@ -1,80 +1,80 @@
 <!DOCTYPE html>
 <html lang="vi">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="shortcut icon" href="/public/img/favicon.svg" type="image/x-icon" />
-    <link rel="stylesheet" href="/public/css/base.min.css" />
-    <link rel="stylesheet" href="/public/css/account.min.css" />
-    <title>Login - Webopers</title>
-  </head>
-  <body>
-    <form action="" method="POST" class="container form" id="login-form">
-      <div class="form-header">
-        <div class="form-title text-supper-large">
-          Welcome to <a href="/" class="text-primary text-bold">Webopers</a>
-        </div>
-        <div class="form-sub-title text-small">
-          Đăng nhập bằng tài khoản Webopers của bạn
-        </div>
-        <div class="form-step">
-          <div class="form-step-block active"></div>
-        </div>
-      </div>
-      <div class="form-body">
-        <div class="form-group">
-          <input
-            type="text"
-            name="email"
-            id="email"
-            autocomplete="email"
-            class="form-input"
-            data-rules="required|email"
-            placeholder="Địa chỉ Email"
-          />
-          <div class="form-icon icon icon-mail"></div>
-          <div class="form-message text-small">Email không được phép để trống</div>
-        </div>
-        <div class="form-group">
-          <input
-            type="password"
-            name="password"
-            id="password"
-            autocomplete="current-password"
-            data-rules="required|min:6"
-            class="form-input"
-            placeholder="Mật khẩu"
-          />
-          <div class="form-icon icon icon-key"></div>
-          <div class="form-message text-small">Mật khẩu không được phép để trống</div>
-          <div class="form-show-password icon icon-eye-slash"></div>
-        </div>
-      </div>
-      <span class="form-forgot text-small">Quên mật khẩu?</span>
-      <div class="form-button-group">
-        <button type="submit" class="btn btn-primary btn-center">
-          <div class="spinner-border"></div>
-          Đăng nhập
-        </button>
-        <button type="button" class="btn btn-secondary btn-center">
-          <div class="spinner-border"></div>
-          Đăng ký
-        </button>
-      </div>
-      <div class="form-social">
-        <div class="form-social-block form-google">
-          <div class="form-social-icon icon icon-google"></div>
-          <div class="form-social-text">Đăng nhập với Google</div>
-        </div>
-        <div class="form-social-block form-facebook">
-          <div class="form-social-icon icon icon-facebook"></div>
-          <div class="form-social-text">Đăng nhập với Facebook</div>
-        </div>
-      </div>
-    </form>
-    <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-auth.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-firestore.js"></script>
-    <script src="/public/js/account/login.js" type="module"></script>
-  </body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="shortcut icon" href="/public/img/favicon.svg" type="image/x-icon" />
+        <link rel="stylesheet" href="/public/css/base.min.css" />
+        <link rel="stylesheet" href="/public/css/account.min.css" />
+        <title>Login - Webopers</title>
+    </head>
+    <body>
+        <form action="" method="POST" class="container form" id="login-form">
+            <div class="form-header">
+                <div class="form-title text-supper-large">
+                    Welcome to <a href="/" class="text-primary text-bold">Webopers</a>
+                </div>
+                <div class="form-sub-title text-small">
+                    Đăng nhập bằng tài khoản Webopers của bạn
+                </div>
+                <div class="form-step">
+                    <div class="form-step-block active"></div>
+                </div>
+            </div>
+            <div class="form-body">
+                <div class="form-group">
+                    <input
+                        type="text"
+                        name="email"
+                        id="email"
+                        autocomplete="email"
+                        class="form-input"
+                        data-rules="required|email"
+                        placeholder="Địa chỉ Email"
+                    />
+                    <div class="form-icon icon icon-mail"></div>
+                    <div class="form-message text-small">Email không được phép để trống</div>
+                </div>
+                <div class="form-group">
+                    <input
+                        type="password"
+                        name="password"
+                        id="password"
+                        autocomplete="current-password"
+                        data-rules="required|min:6"
+                        class="form-input"
+                        placeholder="Mật khẩu"
+                    />
+                    <div class="form-icon icon icon-key"></div>
+                    <div class="form-message text-small">Mật khẩu không được phép để trống</div>
+                    <div class="form-show-password icon icon-eye-slash"></div>
+                </div>
+            </div>
+            <span class="form-forgot text-small">Quên mật khẩu?</span>
+            <div class="form-button-group">
+                <button type="submit" class="btn btn-primary btn-center">
+                    <div class="spinner-border"></div>
+                    Đăng nhập
+                </button>
+                <button type="button" class="btn btn-secondary btn-center" id="register">
+                    <div class="spinner-border"></div>
+                    Đăng ký
+                </button>
+            </div>
+            <div class="form-social">
+                <div class="form-social-block form-google">
+                    <div class="form-social-icon icon icon-google"></div>
+                    <div class="form-social-text">Đăng nhập với Google</div>
+                </div>
+                <div class="form-social-block form-facebook">
+                    <div class="form-social-icon icon icon-facebook"></div>
+                    <div class="form-social-text">Đăng nhập với Facebook</div>
+                </div>
+            </div>
+        </form>
+        <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-auth.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-firestore.js"></script>
+        <script src="/public/js/account/login.js" type="module"></script>
+    </body>
 </html>
