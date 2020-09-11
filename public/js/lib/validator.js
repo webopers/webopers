@@ -100,11 +100,18 @@ class Validator {
         }
     };
 
-    changeInputsVisibility = (isDisabled) => {
-        const submitButton = this.formElement.querySelector('[type=submit]');
-        submitButton.disabled = isDisabled;
-        if (isDisabled) submitButton.classList.add('btn-disabled');
-        else submitButton.classList.remove('btn-disabled');
+    changeInputsVisibility = (isDisabled, showSpinnerSelector = undefined) => {
+        const buttons = this.formElement.querySelectorAll('button');
+        buttons.forEach((button) => {
+            const { id, type } = button;
+            const spinner = button.querySelector('.spinner-border');
+            button.disabled = isDisabled;
+            if (!showSpinnerSelector && type === 'submit') {
+                spinner.classList.add('show');
+            } else if (id.indexOf(showSpinnerSelector) !== -1) {
+                spinner.classList.add('show');
+            }
+        });
         this.inputs.forEach((input) => {
             const inputElement = input;
             inputElement.disabled = isDisabled;

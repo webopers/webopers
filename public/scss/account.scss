@@ -1,153 +1,153 @@
-@import "variables";
+@import 'variables';
 
 body {
-  display: flex;
-  width: 100%;
-  height: 100vh;
-  overflow-x: hidden;
-  overflow-y: auto;
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 
 .container {
-  width: 480px;
-  min-height: min-content;
-  margin: auto;
-  border-radius: 10px;
+    width: 480px;
+    min-height: min-content;
+    margin: auto;
+    border-radius: 10px;
 }
 
 .form {
-  box-shadow: 0 0 24px rgba(0, 0, 0, 0.05);
-  padding: 50px 60px 40px 60px;
-  &-step {
-    display: flex;
-    margin-top: 40px;
-    &-block {
-      width: 60px;
-      height: 3px;
-      border-radius: 3px;
-      margin-right: 20px;
-      background-color: $borderColor;
+    box-shadow: 0 0 24px rgba(0, 0, 0, 0.05);
+    padding: 50px 60px 40px 60px;
+    &-step {
+        display: flex;
+        margin-top: 40px;
+        &-block {
+            width: 60px;
+            height: 3px;
+            border-radius: 3px;
+            margin-right: 20px;
+            background-color: $borderColor;
+        }
+        &-block.active {
+            background-color: $primaryColor;
+        }
     }
-    &-block.active {
-      background-color: $primaryColor;
+    &-sub-title {
+        margin-top: 14px;
+        color: $textLightColor;
     }
-  }
-  &-sub-title {
-    margin-top: 14px;
-    color: $textLightColor;
-  }
-  &-body {
-    margin-top: 65px;
-    border: 1px solid $borderColor;
-    border-radius: 5px;
-    overflow: hidden;
-  }
-  &-group {
-    position: relative;
-  }
-  &-group.invalid &-message {
-    color: red;
-  }
-  &-group.invalid &-message {
-    display: block;
-  }
-  &-group:not(:last-child) {
-    border-bottom: 1px solid $borderColor;
-  }
-  &-input {
-    width: 100%;
-    border: none;
-    outline: none;
-    padding: 18px 20px 18px 62px;
-  }
-  &-input:focus ~ &-icon {
-    background-color: $primaryColor;
-  }
-  &-message {
-    display: none;
-    margin-top: -4px;
-    padding: 0px 24px 20px;
-  }
-  &-icon {
-    position: absolute;
-    top: 20px;
-    left: 24px;
-    width: 16px;
-    height: 16px;
-  }
-  &-show-password {
-    position: absolute;
-    top: 21px;
-    right: 24px;
-    width: 20px;
-    height: 16px;
-    cursor: pointer;
-  }
-  &-forgot {
-    float: right;
-    margin: 14px 0 16px;
-    color: $textLightColor;
-    transition: 0.15s color;
-  }
-  &-forgot:hover {
-    color: $primaryColor;
-    cursor: pointer;
-  }
-  &-button-group {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-  }
-  &-social {
-    margin-top: 65px;
-  }
-  &-social-block {
-    display: flex;
-    align-items: center;
-    padding: 11px 0px;
-    font-weight: 500;
-    font-size: 15px;
-    transition: 0.15s border-color;
-    margin-bottom: 20px;
-    border: 1px solid $borderColor;
-    border-radius: 5px;
-  }
-  &-social-block:hover {
-    cursor: pointer;
-  }
-  &-social-icon {
-    -webkit-mask-size: cover;
-    mask-size: cover;
-  }
-  &-social-text {
-    flex: 1;
-    text-align: center;
-    border-left: 1px solid $borderColor;
-  }
-  &-google &-social-text {
-    color: $googleColor;
-  }
-  &-google:hover {
-    border-color: $googleColor;
-  }
-  &-facebook &-social-text {
-    color: $facebookColor;
-  }
-  &-facebook:hover {
-    border-color: $facebookColor;
-  }
+    &-body {
+        margin-top: 65px;
+        border: 1px solid $borderColor;
+        border-radius: 5px;
+        overflow: hidden;
+    }
+    &-group {
+        position: relative;
+    }
+    &-group.invalid &-message {
+        color: red;
+    }
+    &-group.invalid &-message {
+        display: block;
+    }
+    &-group:not(:last-child) {
+        border-bottom: 1px solid $borderColor;
+    }
+    &-input {
+        width: 100%;
+        border: none;
+        outline: none;
+        padding: 18px 20px 18px 62px;
+    }
+    &-input:focus ~ &-icon {
+        background-color: $primaryColor;
+    }
+    &-message {
+        display: none;
+        margin-top: -4px;
+        padding: 0px 24px 20px;
+    }
+    &-icon {
+        position: absolute;
+        top: 20px;
+        left: 24px;
+        width: 16px;
+        height: 16px;
+    }
+    &-show-password {
+        position: absolute;
+        top: 21px;
+        right: 24px;
+        width: 20px;
+        height: 16px;
+        cursor: pointer;
+    }
+    &-forgot {
+        float: right;
+        margin: 14px 0 16px;
+        color: $textLightColor;
+        transition: 0.15s color;
+    }
+    &-forgot:hover {
+        color: $primaryColor;
+        cursor: pointer;
+    }
+    &-button-group {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+    &-social {
+        margin-top: 65px;
+    }
+    &-social-block {
+        display: flex;
+        align-items: center;
+        padding: 11px 0px;
+        font-weight: 500;
+        font-size: 15px;
+        transition: 0.15s border-color;
+        margin-bottom: 20px;
+        border: 1px solid $borderColor;
+        border-radius: 5px;
+    }
+    &-social-block:hover {
+        cursor: pointer;
+    }
+    &-social-icon {
+        -webkit-mask-size: cover;
+        mask-size: cover;
+    }
+    &-social-text {
+        flex: 1;
+        text-align: center;
+        border-left: 1px solid $borderColor;
+    }
+    &-google &-social-text {
+        color: $googleColor;
+    }
+    &-google:hover {
+        border-color: $googleColor;
+    }
+    &-facebook &-social-text {
+        color: $facebookColor;
+    }
+    &-facebook:hover {
+        border-color: $facebookColor;
+    }
 }
 
 .btn {
-  flex: 1;
+    flex: 1;
 }
 .btn-secondary {
-  margin-left: 20px;
+    margin-left: 20px;
 }
 .spinner-border {
-  display: none;
-  margin-right: 10px;
+    display: none;
+    margin-right: 10px;
 }
-.btn-disabled .spinner-border {
-  display: inline-block;
+.spinner-border.show {
+    display: inline-block;
 }
