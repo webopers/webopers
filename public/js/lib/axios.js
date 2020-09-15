@@ -1,6 +1,6 @@
 class Axios {
     // eslint-disable-next-line class-methods-use-this
-    get = async (url, data) => {
+    post = async (url, data) => {
         const myHeaders = new Headers();
 
         myHeaders.append('Content-Type', 'application/json');

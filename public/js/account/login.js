@@ -13,7 +13,7 @@ const registerButton = document.querySelector('#register');
 const onSubmit = async (data) => {
     loginForm.changeInputsVisibility(true);
 
-    const { code = '' } = await axios.get(`${requestURL}/auth/login`, data);
+    const { code = '' } = await axios.post(`${requestURL}/auth/login`, data);
 
     if (code === 'auth/password-incorrect') {
         loginForm.toggleError('#password', true, 'Mật khẩu không chính xác');
